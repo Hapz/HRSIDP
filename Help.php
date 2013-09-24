@@ -13,7 +13,7 @@
 <div class="headerBar">
 	<div class="header1"></div>
 	<ul id="nav">
-		<li><a href="#">Homepage</a></li>
+		<li><a href="index.php">Homepage</a></li>
 		<li class="subs"><a href="#">Remuneration</a>
 			<ul>
 				<li><a href="ViewRemuneration.php">View Remuneration </a></li>

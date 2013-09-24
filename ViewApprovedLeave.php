@@ -13,33 +13,30 @@
 <div class="headerBar">
 	<div class="header1"></div>
 	<ul id="nav">
-		<li><a href="#">Homepage</a></li>
+		<li><a href="index.php">Homepage</a></li>
 		<li class="subs"><a href="#">Remuneration</a>
 			<ul>
 				<li><a href="ViewRemuneration.php">View Remuneration </a></li>
 				<li><a href="GeneratePaySlip.php">Generate Payslip</a></li>
 				<li><a href="PaymentStatus.php">Payment Status</a></li>
-			</ul>
-		</li>
-		
+			</ul></li>
+
 		<li class="subs"><a href="#">Claims</a>
 			<ul>
 				<li><a href="SubmitClaim.php">Submit Claim</a></li>
 				<li><a href="ViewClaimStatus.php">View Claim Status</a></li>
 				<li><a href="CheckClaimValidty.php">Check Claim Validty</a></li>
-				<li><a href="ApproveClaim.php">Approve Claim</a></li>				
+				<li><a href="ApproveClaim.php">Approve Claim</a></li>
 				<li><a href="GenerateClaimSlip.php">Generate Claimslip</a></li>
-			</ul>
-		</li>
+			</ul></li>
 		<li class="subs"><a href="#">Leave</a>
 			<ul>
 				<li><a href="ApplyLeave.php">Apply Leave</a></li>
 				<li><a href="ApproveLeave.php">Approve Leave </a></li>
 				<li><a href="#">View Approved Leave</a></li>
-				
 
-			</ul>
-		</li>
+
+			</ul></li>
 	</ul>
 
 </head>
@@ -50,13 +47,79 @@
 		<div class="content">
 
 			<div class="mainText">
-				<h2>View Approved Leave</h2>
-				<p></p>
-
-
+				<p>
+					<span style="font-size: 20px;"><strong>Past Leave Taken</strong></span>
+				</p>
+				<p>Balance Number of annual leaves for year 2013:10</p>
+				<p>Medical Leave Balance :14</p>
+				<p>
+					<strong>Active Leave</strong>
+				</p>
+				<table align="left" border="1" cellpadding="1" cellspacing="1"
+					style="width: 500px;">
+					<thead>
+						<tr>
+							<th scope="col">S\N</th>
+							<th scope="col">Date Submitted</th>
+							<th scope="col">From Date</th>
+							<th scope="col">To Date</th>
+							<th scope="col">No. of Days</th>
+							<th scope="col">Leave Type</th>
+							<th scope="col">Approve?</th>
+							<th scope="col">Edit</th>
+							<th scope="col">&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>8/9/2013</td>
+							<td>23/9/2013</td>
+							<td>25/9/2013</td>
+							<td>3</td>
+							<td>Annual</td>
+							<td>Pending</td>
+							<td><a href="#"><u>Edit</u></a></td>
+							<td><a href="#"><u>Remove</u></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>
+					<strong>Past Leave</strong>
+				</p>
+				<table align="left" border="1" cellpadding="1" cellspacing="1"
+					style="width: 500px;">
+					<thead>
+						<tr>
+							<th scope="col">S\N</th>
+							<th scope="col">Date Submitted</th>
+							<th scope="col">From Date</th>
+							<th scope="col">To Date</th>
+							<th scope="col">No. of Days</th>
+							<th scope="col">Leave Type</th>
+							<th scope="col">Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>8/9/2013</td>
+							<td>23/9/2013</td>
+							<td>25/9/2013</td>
+							<td>3</td>
+							<td>Annual</td>
+							<td>Approved</td>
+						</tr>
+					</tbody>
+				</table>
 				<!-- end .content -->
 			</div>
 		</div>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 		<div class="footer">
 			<p>
 				IS306 IDP | Team HAPZ |<a href="Help.php"> Help</a>

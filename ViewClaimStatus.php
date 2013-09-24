@@ -13,33 +13,30 @@
 <div class="headerBar">
 	<div class="header1"></div>
 	<ul id="nav">
-		<li><a href="#">Homepage</a></li>
+		<li><a href="index.php">Homepage</a></li>
 		<li class="subs"><a href="#">Remuneration</a>
 			<ul>
 				<li><a href="ViewRemuneration.php">View Remuneration </a></li>
 				<li><a href="GeneratePaySlip.php">Generate Payslip</a></li>
 				<li><a href="PaymentStatus.php">Payment Status</a></li>
-			</ul>
-		</li>
-		
+			</ul></li>
+
 		<li class="subs"><a href="#">Claims</a>
 			<ul>
 				<li><a href="SubmitClaim.php">Submit Claim</a></li>
 				<li><a href="#">View Claim Status</a></li>
 				<li><a href="CheckClaimValidty.php">Check Claim Validty</a></li>
-				<li><a href="ApproveClaim.php">Approve Claim</a></li>				
+				<li><a href="ApproveClaim.php">Approve Claim</a></li>
 				<li><a href="GenerateClaimSlip.php">Generate Claimslip</a></li>
-			</ul>
-		</li>
+			</ul></li>
 		<li class="subs"><a href="#">Leave</a>
 			<ul>
 				<li><a href="ApplyLeave.php">Apply Leave</a></li>
 				<li><a href="ApproveLeave.php">Approve Leave </a></li>
 				<li><a href="ViewApprovedLeave.php">View Approved Leave</a></li>
-				
 
-			</ul>
-		</li>
+
+			</ul></li>
 	</ul>
 
 </head>
@@ -51,12 +48,50 @@
 
 			<div class="mainText">
 				<h2>View Claim Status</h2>
-				<p></p>
+				<p>
+					<inpu< p=""></inpu
+					<>
+				</p>
+				<table border="1" cellpadding="1" cellspacing="1"
+					style="width: 500px;">
+					<thead>
+						<tr>
+							<th scope="col">Project</th>
+							<th scope="col">Type</th>
+							<th scope="col">Date</th>
+							<th scope="col">Amount</th>
+							<th scope="col">Status</th>
+							<th scope="col">Remarks by Approved</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Transport</td>
+							<td>25/3/2013</td>
+							<td>$25.70</td>
+							<td style="text-align: center;">Approved</td>
+							<td style="text-align: center;">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Transport</td>
+							<td>27/3/2013</td>
+							<td>$30.70</td>
+							<td>
+								<div style="text-align: center;">Approved</div>
+							</td>
+							<td style="text-align: center;">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
 
 
 				<!-- end .content -->
 			</div>
 		</div>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 		<div class="footer">
 			<p>
 				IS306 IDP | Team HAPZ |<a href="Help.php"> Help</a>

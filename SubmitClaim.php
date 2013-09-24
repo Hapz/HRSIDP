@@ -13,7 +13,7 @@
 <div class="headerBar">
 	<div class="header1"></div>
 	<ul id="nav">
-		<li><a href="#">Homepage</a></li>
+		<li><a href="index.php">Homepage</a></li>
 		<li class="subs"><a href="#">Remuneration</a>
 			<ul>
 				<li><a href="ViewRemuneration.php">View Remuneration </a></li>
@@ -50,9 +50,37 @@
 		<div class="content">
 
 			<div class="mainText">
-				<h2>Submit Claim</h2>
+				<h2>Submit New Claim</h2>
 				<p></p>
 
+				<form>
+					Project: <input type="text" name="project_no."/><br/>
+					Type:<br/>
+					<input type="radio" name="leave" value="male">Entertainment<br>
+					<input type="radio" name="leave" value="female">Transport (Taxi, petrol)<br>
+					<input type="radio" name="leave" value="female">Telecom<br>
+					<input type="radio" name="leave" value="female">Stationery<br>
+					<input type="radio" name="leave" value="female">Hardware<br>
+					<input type="radio" name="leave" value="female">Others: <input type="text" name="other_leaves"/>
+				
+					<br/>
+					<br/>
+					<br/>				
+				
+					Amount: S$ <input type="text" name="amount"/><br/>
+					Date: <input type="date" name="date"> <br/>
+					<br/>
+					<br/>
+					
+					Please upload claim receipt: <br/>
+					
+					<label for="file">Select File:</label>
+					<input type="file" name="file" id="file"><br>
+				
+				
+				
+				
+				</form>
 
 				<!-- end .content -->
 			</div>

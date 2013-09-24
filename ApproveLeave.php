@@ -37,6 +37,7 @@
 				<li><a href="#">Approve Leave </a></li>
 				<li><a href="ViewApprovedLeave.php">View Approved Leave</a></li>
 				
+				
 
 			</ul>
 		</li>
@@ -53,6 +54,42 @@
 				<h2>Approve Leave</h2>
 				<p></p>
 
+				The following leave are required for your approval:<br/><br/>
+				
+				<!-- Row Highlight Javascript -->
+<script type="text/javascript">
+	window.onload=function(){
+	var tfrow = document.getElementById('tfhover').rows.length;
+	var tbRow=[];
+	for (var i=1;i<tfrow;i++) {
+		tbRow[i]=document.getElementById('tfhover').rows[i];
+		tbRow[i].onmouseover = function(){
+		  this.style.backgroundColor = '#ffffff';
+		};
+		tbRow[i].onmouseout = function() {
+		  this.style.backgroundColor = '#d4e3e5';
+		};
+	}
+};
+</script>
+
+<style type="text/css">
+table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+table.tftable tr {background-color:#d4e3e5;}
+table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+
+<form>
+<table id="tfhover" class="tftable" border="1">
+<tr><th>S/N</th><th>Date Submitted</th><th>Employee Name</th><th>From Date</th><th>To Date</th><th>No. of Days</th><th>Leave Type</th><th>Supporting Documents</th><th>Approve <input type="checkbox"></th><th>Reject <input type="checkbox"></th></tr>
+<tr><td>1</td><td>8/9/2013</td><td>Kevin</td><td>23/09/2013</td><td>25/09/2013</td><td>3</td><td>Annual</td><td>-</td><td><input type="checkbox">  </td><td> <input type="checkbox"> </td></tr>
+</table>
+
+<br/>
+<input type="submit"/>
+
+</form>
 
 				<!-- end .content -->
 			</div>

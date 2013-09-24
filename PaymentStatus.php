@@ -3,57 +3,112 @@
 <head>
 <script src=".\jquery-ui-1.10.3.custom\js\jquery-1.9.1.js">
 </script>
-<meta name="Author" content="Team HAPZ" />
-<meta name="keywords" content="Human Resource Management Portal" />
-
-<meta name="description" content="PaymentStatus" />
-
-<title>Sterling Engineering | Payment Status</title>
+<meta content="Team HAPZ" name="Author" />
+<meta content="Human Resource Management Portal" name="keywords" />
+<meta content="Approve Claim" name="description" />
+<title>Sterling Engineering | Approve Claim</title>
 <link href="styleSheet.css" rel="stylesheet" type="text/css" />
-<div class="headerBar">
-	<div class="header1"></div>
-	<ul id="nav">
-		<li><a href="#">Homepage</a></li>
-		<li class="subs"><a href="#">Remuneration</a>
-			<ul>
-				<li><a href="ViewRemuneration.php">View Remuneration </a></li>
-				<li><a href="GeneratePaySlip.php">Generate Payslip</a></li>
-				<li><a href="#">Payment Status</a></li>
-			</ul>
-		</li>
-		
-		<li class="subs"><a href="#">Claims</a>
-			<ul>
-				<li><a href="SubmitClaim.php">Submit Claim</a></li>
-				<li><a href="ViewClaimStatus.php">View Claim Status</a></li>
-				<li><a href="CheckClaimValidty.php">Check Claim Validty</a></li>
-				<li><a href="ApproveClaim.php">Approve Claim</a></li>				
-				<li><a href="GenerateClaimSlip.php">Generate Claimslip</a></li>
-			</ul>
-		</li>
-		<li class="subs"><a href="#">Leave</a>
-			<ul>
-				<li><a href="ApplyLeave.php">Apply Leave</a></li>
-				<li><a href="ApproveLeave.php">Approve Leave </a></li>
-				<li><a href="ViewApprovedLeave.php">View Approved Leave</a></li>
-				
-
-			</ul>
-		</li>
-	</ul>
-
 </head>
-<!– end #headerBar –>
-</div>
 <body id="bhome">
+	<div class="headerBar">
+		<div class="header1">&nbsp;</div>
+		<ul id="nav">
+			<li><a href="index.php">Homepage</a></li>
+			<li class="subs"><a href="#">Remuneration</a>
+				<ul>
+					<li><a href="ViewRemuneration.php">View Remuneration </a></li>
+					<li><a href="GeneratePaySlip.php">Generate Payslip</a></li>
+					<li><a href="PaymentStatus.php">Payment Status</a></li>
+				</ul></li>
+			<li class="subs"><a href="#">Claims</a>
+				<ul>
+					<li><a href="SubmitClaim.php">Submit Claim</a></li>
+					<li><a href="ViewClaimStatus.php">View Claim Status</a></li>
+					<li><a href="CheckClaimValidty.php">Check Claim Validty</a></li>
+					<li><a href="#">Approve Claim</a></li>
+					<li><a href="GenerateClaimSlip.php">Generate Claimslip</a></li>
+				</ul></li>
+			<li class="subs"><a href="#">Leave</a>
+				<ul>
+					<li><a href="ApplyLeave.php">Apply Leave</a></li>
+					<li><a href="ApproveLeave.php">Approve Leave </a></li>
+					<li><a href="ViewApprovedLeave.php">View Approved Leave</a></li>
+				</ul></li>
+		</ul>
+		<!--– end #headerBar –-->
+	</div>
 	<div class="container">
 		<div class="content">
-
 			<div class="mainText">
 				<h2>Payment Status</h2>
-				<p></p>
-
-
+				<table border="0" cellpadding="1" cellspacing="1"
+					style="width: 500px;">
+					<tbody>
+						<tr >
+							<td>Show payment status for :&nbsp;</td>
+							<td><input type="checkbox" />All Employee</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="checkbox" />Line Manager</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="checkbox" />Workers</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="checkbox" />Departments</td>
+							<td><select><option selected="selected" value="">Project</option></select></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="button" value="Show List" /></td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<table border="1" cellpadding="1" cellspacing="1">
+					<thead>
+						<tr>
+							<th scope="col">No</th>
+							<th scope="col">Name</th>
+							<th scope="col">Role</th>
+							<th scope="col">Month</th>
+							<th scope="col">Remuneration Amount</th>
+							<th scope="col">Payment Status<input type="checkbox" /></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Kelvin Lim</td>
+							<td style="text-align: center;">1</td>
+							<td>Line Manager</td>
+							<td>March</td>
+							<td>$2200 &nbsp;</td>
+							<td style="text-align: center;"><input type="checkbox" />Issued</td>
+						</tr>
+						<tr>
+							<td>Amy Lee</td>
+							<td style="text-align: center;">2</td>
+							<td>Worker</td>
+							<td>March</td>
+							<td>$2000 &nbsp; &nbsp; &nbsp;&nbsp;</td>
+							<td style="text-align: center;"><input type="checkbox" />Issued</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<p style="text-align: center;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+						type="button" value="Update" />
+				</p>
+				<p>&nbsp;</p>
 				<!-- end .content -->
 			</div>
 		</div>

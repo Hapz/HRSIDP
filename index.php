@@ -51,7 +51,7 @@
 
 			<div class="mainText">
 				<h2>HomePage</h2>
-				<p>This is the page the Users will see upon successful login.</p>
+				<p>Hello Angeline! Welcome to Sterling Engineering Human Resource Management Portal!</p>
 
 
 				<!-- end .content -->
