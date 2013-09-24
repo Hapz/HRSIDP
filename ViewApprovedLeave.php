@@ -55,8 +55,32 @@
 				<p>
 					<strong>Active Leave</strong>
 				</p>
-				<table align="left" border="1" cellpadding="1" cellspacing="1"
-					style="width: 500px;">
+				<script type="text/javascript">
+	window.onload=function(){
+	var tfrow = document.getElementById('tfhover').rows.length;
+	var tbRow=[];
+	for (var i=1;i<tfrow;i++) {
+		tbRow[i]=document.getElementById('tfhover').rows[i];
+		tbRow[i].onmouseover = function(){
+		  this.style.backgroundColor = '#ffffff';
+		};
+		tbRow[i].onmouseout = function() {
+		  this.style.backgroundColor = '#d4e3e5';
+		};
+	}
+};
+</script>
+
+<style type="text/css">
+table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+table.tftable tr {background-color:#d4e3e5;}
+table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+				
+				
+				
+				<table id="tfhover" class="tftable" border="1">
 					<thead>
 						<tr>
 							<th scope="col">S\N</th>
@@ -85,13 +109,11 @@
 					</tbody>
 				</table>
 				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
+				
 				<p>
 					<strong>Past Leave</strong>
 				</p>
-				<table align="left" border="1" cellpadding="1" cellspacing="1"
-					style="width: 500px;">
+				<table id="tfhover" class="tftable" border="1">
 					<thead>
 						<tr>
 							<th scope="col">S\N</th>
