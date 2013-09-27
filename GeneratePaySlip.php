@@ -96,7 +96,8 @@ table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: so
 
 <table id="tfhover" class="tftable" border="1">
 <tr><th>S/N</th><th>Name</th><th>Role</th><th>Month</th><th>Generated Time</th><th>View</th><th>Print<input type="checkbox"></th><th>Delete</th></tr>
-<tr><td>1.</td><td>Jack Tan</td><td>Line Manager</td><td>March</td><td>24/09/2013 3:52PM</td><td><a href="/view">View</a></td><td>Print <input type="checkbox"></td><td><a href="/delete">Delete</a></td></tr>
+<tr><td>1.</td><td>Jack Tan</td><td>Line Manager</td><td>March</td><td>24/09/2013 3:52PM</td><td><a href="http://localhost/HRSIDP/view.php" onclick="javascript:void window.open('http://localhost/HRSIDP/view.php','1380264227356','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=0,left=0,top=0');return false;">View</a>
+</td><td>Print <input type="checkbox"></td><td><a href="/delete">Delete</a></td></tr>
 <tr><td>2.</td><td>Jane Tan</td><td>Employee</td><td>March</td><td>24/08/2013 3:51</td><td><a href="/view">View</a></td><td>Print <input type="checkbox"></td><td><a href="/delete">Delete</a></td></tr>
 </table>
 
