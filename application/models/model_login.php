@@ -3,7 +3,7 @@
 class model_login extends CI_Model{
 	public function login_user(){
 		//load phpass libary, have to pass in an array
-		$this->load->library('passwordhash', array('iteration_count_log2' => 8, 'portable_hashes' => FALSE ));
+		$this->load->library('PasswordHash', array('iteration_count_log2' => 8, 'portable_hashes' => FALSE ));
 		
 		//grab email and password from global post array
 		$email=$this->input->post('email');

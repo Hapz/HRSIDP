@@ -21,6 +21,7 @@ class Employee extends CI_Model{
 	private $allowancesEntitlement;
 	private $leaveEntitlement;
 	
+	
 	//why got =null in parameter ? think is the Syntax of PHP 
 	public function Employee($nric=null,$firstName=null,$lastName=null,$email=null,$residentialAddress=null,$position=null,$basicSalary=null,$mobileContact=null,$gender=null,$race=null,$religion=null,$nextOfKin=null,$nextOfKinContactNo=null,$highestQualification=null,$nationality=null,$joinedDate=null,$department=null,$employementType=null,$allowancesEntitlement=null,$leaveEntitlement=null){
 		$this->nric = $nric;

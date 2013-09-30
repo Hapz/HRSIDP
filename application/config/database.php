@@ -48,14 +48,15 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-/*
+
 //this is for working with 000webhost.com
-$db['default']['hostname'] = 'a4889869_hrsDB';
+/*
+$db['default']['hostname'] = 'mysql6.000webhost.com';
 $db['default']['username'] = 'a4889869_SAdmin';
 $db['default']['password'] = '123qweasdzxchapz';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';*/
-
+$db['default']['database'] = 'a4889869_hrsDB';
+$db['default']['dbdriver'] = 'mysql';
+*/
 
 //this is for working on localhost
 $db['default']['hostname'] = 'localhost';

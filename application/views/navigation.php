@@ -25,7 +25,7 @@
 			<li><a href="#">Generate leave report</a></li>
 		</ul></li>
 		
-	<li>	
+	<!--  <li>	
 	<a class="arrow">Training & Development</a>
 		<ul>
 			<li><a class="arrow">Manage Course</a>
@@ -78,5 +78,5 @@
 			<li><a href="EmployeeCtrl/checkLoginCredentials">YX Link 2 (login value 1 or 0)</a></li>
 			<li><a href="EmployeeCtrl/getEmployee">YX Link 3 (search employee by type)</a></li>
 			<li><a href="EmployeeCtrl/addNewEmployee">YX Link 3 (add employee)</a></li>
-		</ul></li>
+		</ul></li>-->
 </ul>

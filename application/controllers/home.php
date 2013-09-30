@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 session_start();
 
-class Home extends My_Controller{
+class Home extends MY_Controller{
 	
 	private $logged_in;	
 		
