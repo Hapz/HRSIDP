@@ -1,6 +1,6 @@
 <?php
 
-class EmployeeCtrl extends MY_Controller{
+class EmployeeCtrl extends CI_Controller{
 	
 	//check the username & password; for login
 	//public function checkLoginCredentials($username,$password){

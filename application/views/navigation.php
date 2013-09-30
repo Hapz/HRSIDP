@@ -3,8 +3,8 @@
 	<li style="margin-left: 70px;"><a href="#2" class="arrow">Renumeration</a>
 		<ul>
 			<li><a href="#">View Payment Records</a></li>
-			<li><a href="home/generatePayment">Generate All Payment Record</a></li>
-			<li><a href="#">Update payment status</a></li>
+			<li><a href="RemunerationCtrl/generatePayment">Generate All Payment Record</a></li>
+			<li><a href="RemunerationCtrl/updatePayment">Update payment status</a></li>
 		</ul></li>
 		
 	<li><a href="#3" class="arrow">Claims</a>
@@ -25,7 +25,7 @@
 			<li><a href="#">Generate leave report</a></li>
 		</ul></li>
 		
-	<!--  <li>	
+	 <!--  <li>	
 	<a class="arrow">Training & Development</a>
 		<ul>
 			<li><a class="arrow">Manage Course</a>

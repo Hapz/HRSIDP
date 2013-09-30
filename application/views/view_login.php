@@ -9,7 +9,7 @@
 <div class="wrapper2">
 <form id ="loginForm" action='<?php echo base_url();?>login/login_user' method='post' name='login_user'>
 <table class="d">
-     <tr><td ><label for="email">Email:</label></td>
+     <tr><td ><label for="email">Username:</label></td>
      <td><input type="text" size="20" id="email" name="email"/></td></tr>
      <tr><td><label for="password">Password:</label></td>
      <td><input type="password" size="20" id="password" name="password"/></td></tr>
