@@ -40,12 +40,12 @@ h2 {
 .wrapper2 {
 	width: 25%;
 	margin: 0 auto;
-	padding: 15px;
+	padding: 75px;
 	border: 1px #333;
 }
 
 .wrapper3 {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	text-align: left;
 	padding: 10px;
@@ -103,230 +103,6 @@ ul.nav a,ul.nav a:visited {
 	text-align: center;
 }
 
-table.a {
-	font-family: verdana, arial, sans-serif;
-	font-size: 11px;
-	padding: 8px;
-	border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-table.a th {
-	background: #3399CC;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.a tr.alt td {
-	background: #b5cfd2;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.a td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.b {
-	font-family: verdana, arial, sans-serif;
-	font-size: 11px;
-	color: #333333;
-	padding: 8px;
-	border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
-	width: 640px;
-	table-layout: fixed;
-}
-
-table.b th {
-	background: #3399CC;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.b tr.alt td {
-	background: #b5cfd2;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.b td {
-	background: #dcddc0;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.c {
-	font-family: verdana, arial, sans-serif;
-	font-size: 12px;
-	color: #333333;
-	padding: 8px;
-	border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
-	width: 500px;
-}
-
-table.c th {
-	background: #3399CC;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.facility tr.sub td {
-	background: #89C0DC;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.c tr.alt td {
-	background: #CEE4EF;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.c td {
-	background: #FFFFFF;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.d {
-	font-family: "Trebuchet MS", sans-serif;
-	font-size: 13px;
-	border: none;
-	padding: 2px;
-	border-collapse: collapse;
-	width: 90%;
-	column-width: 50%;
-}
-
-table.d th {
-	border-width: 1px;
-	padding: 2px;
-}
-
-table.d tr.alt td {
-	border-width: 1px;
-	padding: 2px;
-}
-
-table.d td {
-	border-width: 1px;
-	padding: 2px;
-}
-
-table.e {
-	font-family: verdana, arial, sans-serif;
-	font-size: 12px;
-	color: #333333;
-	padding: 8px;
-	border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-table.e th {
-	background: #3399CC;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e tr.sub td {
-	background: #89C0DC;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e tr.alt td {
-	background: #CEE4EF;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e td.av {
-	background: #B7DD8B;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e td.unav {
-	background: #E67696;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e td.filt {
-	background: #FFFF00;
-	border-width: 1px;
-	padding: 2px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e td.nil {
-	background: #FFFFFF;
-	border-width: 1px;
-	padding: 2px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.e td {
-	background: #FFFFFF;
-	border-width: 1px;
-	padding: 2px;
-	border-style: solid;
-	border-color: #999999;
-}
-
-table.f {
-	font-family: verdana, arial, sans-serif;
-	font-size: 13px;
-	padding: 2px;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-table.f td {
-	padding: 2px;
-}
-
 .wrapper4 {
 	width: 40%;
 	position: fixed;
@@ -362,359 +138,389 @@ table.f td {
 	position: fixed;
 	z-index: 5000;
 }
-
-#fbtab a {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-.menuH {
-	/* You will get totally diffrent menu alignment and layout by setting following margin, width, and float with different values.
-    For detailed instruction please visit www.menucool.com/horizontal/change-menu-alignment  */
-	margin: 0;
-	width: 100%;
-	float: none;
-	/*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
-	/*Note: Unlike image file, htc file path is relative to the page, not this CSS file.*/
-	behavior: url("/horizontal/menuh/cssmenu.htc");
-	height: 36px;
-	border: 1px solid #BBB;
-	position: relative; /*! for IE htc*/
-	z-index: 4; /*H2*/
-	font-family: Arial, Helvetica, sans-serif;
-	list-style: none;
-	padding: 0;
-	background: rgb(63, 76, 107); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(63, 76, 107, 1) 0%,
-		rgba(63, 76, 107, 1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(63,
-		76, 107, 1)), color-stop(100%, rgba(63, 76, 107, 1)));
-	/* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(63, 76, 107, 1) 0%,
-		rgba(63, 76, 107, 1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(63, 76, 107, 1) 0%,
-		rgba(63, 76, 107, 1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(63, 76, 107, 1) 0%,
-		rgba(63, 76, 107, 1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(63, 76, 107, 1) 0%,
-		rgba(63, 76, 107, 1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#3f4c6b',
-		endColorstr='#3f4c6b', GradientType=0); /* IE6-9 */
-}
-
-.menuH li {
-	padding: 0;
-	/*margin: 0;
-    display: block; TODO: I am testing them if they can be removed. If can, remove them.*/
-	float: left;
-	height: 36px;
-	position: relative;
-	/*move it into .menuH if you want submenu to be positioned relative to the whole menu instead of this li element*/
-}
-
-.menuH li:hover,.menuH li.onhover {
-	background-color: #6D84B4;
-	colour: #FFFFFF;
-}
-
-ul.menuH a {
-	padding: 0 15px;
-	line-height: 36px;
-	/*Note: keep this value the same as the height of .menuH and .menuH li */
+/* TABLE CSS*/
+table.tftable {
 	font-size: 12px;
-	font-weight: bold;
-	color: #FFFFFF;
-	display: block;
-	outline: 0;
-	text-decoration: none;
-}
-
-.menuH a:hover {
-	color: #FFFFFF;
-}
-
-.menuH a.arrow {
-	background: url(arrow.gif) no-repeat right center;
-}
-
-.menuH ul a.arrow {
-	background: url(right.gif) no-repeat 97% center;
-}
-
-/*Used to align a top-level item to the right*/
-.menuH .menuRight {
-	float: right;
-	margin-right: 0px;
-}
-
-/*for the top-level separators*/
-.menuH li.separator {
-	font-size: 0;
-	overflow: hidden;
-	border-left: 1px solid #F7F7F7;
-	border-right: 1px solid #BBBBBB;
-}
-
-/*######sub level###########*/
-ul.menuH ul {
-	width: 200px;
-	position: absolute;
-	left: -9999px;
-	border: 1px solid #DDD;
-	border-top: 0;
-	background: #FFF;
-	text-align: left;
-	list-style: none;
-	margin: 0;
-	/*Following 1px(padding-right) will determine how much it is overlapped by the sub-sub-menu */
-	padding: 0 1px 10px 0;
-}
-
-.menuH li li {
-	float: none;
-	white-space: nowrap;
-	height: 26px;
-}
-
-.menuH li li:hover,.menuH li li.onhover {
-	background-color: #6D84B4;
-}
-
-.menuH ul a {
-	padding: 0 10px;
-	line-height: 26px;
-	font-size: 0.9em;
-	font-weight: normal;
-	color: #000000;
-	text-align: left;
-}
-
-.menuH ul a:hover {
-	color: #FFFFFF;
-}
-
-.menuH li:hover ul,.menuH li.onhover ul {
-	left: -1px; /*Use this property to change offset of the dropdown*/
-	top: auto;
-}
-
-.menuH li:hover .dropToLeft,.menuH li.onhover .dropToLeft {
-	left: auto;
-	right: -1px;
-	top: auto;
-}
-
-.menuH ul ul {
-	border-top: 1px solid #DDD;
-}
-
-.menuH li:hover ul ul,.menuH li:hover ul ul ul,.menuH li:hover ul ul ul ul,.menuH li.onhover ul ul,.menuH li.onhover ul ul ul,.menuH li.onhover ul ul ul ul
-	{
-	left: -9999px;
-	top: 0;
-}
-
-.menuH li li:hover ul,.menuH li li li:hover ul,.menuH li li li li:hover ul,.menuH li li.onhover ul,.menuH li li li.onhover ul,.menuH li li li li.onhover ul
-	{
-	left: 200px;
-}
-
-/*####### special effects ##########*/
-.decor1 {
-	-moz-border-radius: 3px; /* Firefox */
-	-webkit-border-radius: 3px; /* Safari and Chrome */
-	border-radius: 3px;
-	/* Opera 10.5+, future browsers, and now also our behavior htc file */
-	-moz-box-shadow: 0px 1px 4px #eee; /* Firefox */
-	-webkit-box-shadow: 0px 1px 4px #eee; /* Safari and Chrome */
-	box-shadow: 0px 1px 4px #eee;
-	/* Opera 10.5+, future browsers and IE6+ using our behavior htc file */
-}
-
-.decor2 {
-	-moz-border-radius: 3px; /* Firefox */
-	-webkit-border-radius: 3px; /* Safari and Chrome */
-	border-radius: 3px;
-	/* Opera 10.5+, future browsers, and now also our behavior htc file */
-	-moz-box-shadow: 0px 1px 4px #eee; /* Firefox */
-	-webkit-box-shadow: 0px 1px 4px #eee; /* Safari and Chrome */
-	box-shadow: 0px 1px 4px #eee;
-	/* Opera 10.5+, future browsers and IE6+ using our behavior htc file */
-}
-
-.menuH ul {
-	-moz-border-radius: 0px 0px 4px 4px;
-	-webkit-border-radius: 0px 0px 4px 4px;
-	border-radius: 0px 0px 4px 4px;
-	-moz-box-shadow: 0px 6px 6px #CCC;
-	-webkit-box-shadow: 0px 6px 6px #CCC;
-	box-shadow: 0px 6px 6px #CCC;
-	/* Gradient background */
-	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF),
-		to(#EEEEEE));
-}
-
-.menuJ ul {
-	-moz-border-radius: 0px 0px 4px 4px;
-	-webkit-border-radius: 0px 0px 4px 4px;
-	border-radius: 0px 0px 4px 4px;
-	-moz-box-shadow: 0px 6px 6px #CCC;
-	-webkit-box-shadow: 0px 6px 6px #CCC;
-	box-shadow: 0px 6px 6px #CCC;
-	/* Gradient background */
-	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF),
-		to(#EEEEEE));
-}
-
-.menuJ {
-	/* You will get totally diffrent menu alignment and layout by setting following margin, width, and float with different values.
-    For detailed instruction please visit www.menucool.com/horizontal/change-menu-alignment  */
-	float: none;
-	margin: 0;
+	color: #333333;
 	width: 100%;
-	/*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
-	/*Note: Unlike image file, htc file path is relative to the page, not this CSS file.*/
-	behavior: url("/horizontal/menuh/cssmenu.htc");
-	height: 36px;
-	position: relative; /*! for IE htc*/
-	z-index: 6; /*H2*/
-	font-family: Arial, Helvetica, sans-serif;
-	list-style: none;
-	padding: 0;
-	background: #FFFFFF;
+	border-width: 1px;
+	border-color: #729ea5;
+	border-collapse: collapse;
 }
 
-.menuJ li.floatRight {
-	float: right;
-}
-
-.menuJ li {
-	padding: 0;
-	/*margin: 0;
-    display: block; TODO: I am testing them if they can be removed. If can, remove them.*/
-	float: left;
-	height: 36px;
-	position: relative;
-	/*move it into .menuJ if you want submenu to be positioned relative to the whole menu instead of this li element*/
-}
-
-.menuJ li:hover,.menuJ li.onhover {
-	background-color: #6D84B4;
-	colour: #FFFFFF;
-}
-
-ul.menuJ a {
-	padding: 0 15px;
-	line-height: 36px;
-	/*Note: keep this value the same as the height of .menuJ and .menuJ li */
+table.tftable th {
 	font-size: 12px;
-	color: #000000;
-	display: block;
-	outline: 0;
-	text-decoration: none;
-}
-
-.menuJ a:hover {
-	color: #FFFFFF;
-}
-
-.menuJ a.arrow {
-	background: url(arrow.gif) no-repeat right center;
-}
-
-.menuJ ul a.arrow {
-	background: url(right.gif) no-repeat 97% center;
-}
-
-/*for the top-level separators*/
-.menuJ li.separator {
-	font-size: 0;
-	overflow: hidden;
-	border-left: 1px solid #F7F7F7;
-	border-right: 1px solid #BBBBBB;
-}
-
-/*######sub level###########*/
-ul.menuJ ul {
-	width: 200px;
-	position: absolute;
-	left: -9999px;
-	border: 1px solid #DDD;
-	border-top: 0;
-	background: #FFF;
-	text-align: left;
-	list-style: none;
-	margin: 0;
-	/*Following 1px(padding-right) will determine how much it is overlapped by the sub-sub-menu */
-	padding: 0 1px 10px 0;
-}
-
-.menuJ li li {
-	float: none;
-	white-space: nowrap;
-	height: 26px;
-}
-
-.menuJ li li:hover,.menuJ li li.onhover {
-	background-color: #6D84B4;
-}
-
-.menuJ ul a {
-	padding: 0 10px;
-	line-height: 26px;
-	font-size: 0.9em;
-	font-weight: normal;
-	color: #000000;
+	background-color: #acc8cc;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #729ea5;
 	text-align: left;
 }
 
-.menuJ ul a:hover {
-	color: #FFFFFF;
+table.tftable tr {
+	background-color: #d4e3e5;
 }
 
-.menuJ li:hover ul,.menuJ li.onhover ul {
-	left: -1px; /*Use this property to change offset of the dropdown*/
-	top: auto;
+table.tftable td {
+	font-size: 12px;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #729ea5;
 }
 
-.menuJ li:hover .dropToLeft,.menuJ li.onhover .dropToLeft {
-	left: auto;
-	right: -1px;
-	top: auto;
+table.options {
+	font-family:"Trebuchet MS", sans-serif;
+	font-size:13px;
+	border: none;
+	padding: 2px;
+	border-collapse: collapse;
+	width:90%;
+	column-width: 50%;
+}
+table.options th {
+	border-width: 1px;
+	padding: 2px;
 }
 
-.menuJ ul ul {
-	border-top: 1px solid #DDD;
+table.options tr.alt td{
+	border-width: 1px;
+		padding: 2px;
 }
 
-.menuJ li:hover ul ul,.menuJ li:hover ul ul ul,.menuJ li:hover ul ul ul ul,.menuJ li.onhover ul ul,.menuJ li.onhover ul ul ul,.menuJ li.onhover ul ul ul ul
-	{
-	left: -9999px;
-	top: 0;
+
+table.options td {
+	border-width: 1px;
+	padding: 2px;
+}
+/*CHECK BOXES*/
+
+input[type="checkbox"] {
+    display:none;
 }
 
-.menuJ li li:hover ul,.menuJ li li li:hover ul,.menuJ li li li li:hover ul,.menuJ li li.onhover ul,.menuJ li li li.onhover ul,.menuJ li li li li.onhover ul
-	{
-	left: 200px;
+input[type="checkbox"] + label {
+    color:#f2f2f2;
+    font-family:Arial, sans-serif;
+    font-size:14px;
 }
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(../images/check_radio_sheet.png) -19px top no-repeat;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color:#000;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(../images/check_radio_sheet.png) -57px top no-repeat;
+}
+/*NAVIGATION BAR CODES/
+
+/* common and top level styles */
+#nav span {
+    display: none;
+}
+#nav, #nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+
+}
+#nav {
+    background-color: #6D84B4;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+    width: 98%;
+    z-index: 5000;
+    
+}
+#nav ul.subs {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #333333;
+    display: none;
+    left: 0;
+    padding: 2%;
+    position: absolute;
+    /*position from top*/
+    top: 36px;
+    width: 96%;
+}
+#nav > li {
+    border-bottom: 5px solid transparent;
+    float: left;
+    margin-bottom: -5px;
+    text-align: left;
+    -moz-transition: all 300ms ease-in-out 0s;
+    -ms-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    
+}
+#nav li a {
+    display: block;
+    text-decoration: none;
+    -moz-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -ms-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -o-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -webkit-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    white-space: normal;
+    
+}
+#nav > li > a {
+        color: #FFFFFF;
+    display: block;
+    font-size: 1em;
+    line-height: 36px;
+    padding: 0 15px;
+}
+#nav > li:hover > a, #nav > a:hover {
+    background-color: #F55856;
+    color: #FFFFFF;
+}
+#nav li.active > a {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* submenu */
+#nav li:hover ul.subs {
+    display: block;
+}
+#nav ul.subs > li {
+    display: inline-block;
+    float: none;
+    padding: 10px 1%;
+    vertical-align: top;
+    width: 33%;
+}
+#nav ul.subs > li a {
+    color: #777777;
+    line-height: 20px;
+}
+#nav ul li a:hover {
+    color: #91b8b3;
+}
+#nav ul.subs > li > a {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+#nav ul.subs > li li {
+    float: none;
+    padding-left: 8px;
+    -moz-transition: padding 150ms ease-out 0s;
+    -ms-transition: padding 150ms ease-out 0s;
+    -o-transition: padding 150ms ease-out 0s;
+    -webkit-transition: padding 150ms ease-out 0s;
+    transition: padding 150ms ease-out 0s;
+}
+#nav ul.subs > li li:hover {
+    padding-left: 15px;
+}
+
+/* responsive rules */
+@media all and (max-width : 980px) {
+    #nav > li {
+        float: none;
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    #nav ul.subs {
+        position: relative;
+        top: 0;
+    }
+    #nav li:hover ul.subs {
+        display: none;
+    }
+    #nav li #s1:target + ul.subs,
+    #nav li #s2:target + ul.subs,
+    #nav li #s3:target + ul.subs,
+    #nav li #s4:target + ul.subs,
+    #nav li #s5:target + ul.subs,
+    #nav li #s6:target + ul.subs {
+        display: block;
+    }
+
+    #nav ul.subs > li {
+        display: block;
+        width: auto;
+    }
+}
+
+/*LOGIN BAR CODES*/
+#login span {
+    display: none;
+}
+#login, #login ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#login {
+    background-color: #FFFFFF;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+    width: 98%;
+    z-index: 7000;
+}
+#login ul.subs {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #333333;
+    display: none;
+    left: 0;
+    padding: 2%;
+    position: absolute;
+    /*position from top*/
+    top: 36px;
+    width: 96%;
+}
+#login > li {
+    border-bottom: 5px solid transparent;
+    float: right;
+    margin-bottom: -5px;
+    text-align: left;
+    -moz-transition: all 300ms ease-in-out 0s;
+    -ms-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    white-space: normal;
+    line-height: 36px;
+}
+#login li a {
+    display: block;
+    text-decoration: none;
+    -moz-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -ms-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -o-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -webkit-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    white-space: normal;
+}
+#login > li > a {
+    color: #333333;
+    display: block;
+    font-size: 1em;
+    line-height: 36px;
+    padding: 0 15px;
+}
+#login > li:hover > a, #login > a:hover {
+    background-color: #F55856;
+    color: #FFFFFF;
+}
+#login li.active > a {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* submenu */
+#login li:hover ul.subs {
+    display: block;
+}
+#login ul.subs > li {
+    display: inline-block;
+    float: none;
+    padding: 10px 1%;
+    vertical-align: top;
+    width: 33%;
+}
+#login ul.subs > li a {
+    color: #777777;
+    line-height: 20px;
+}
+#login ul li a:hover {
+    color: #91b8b3;
+}
+#login ul.subs > li > a {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+#login ul.subs > li li {
+    float: none;
+    padding-left: 8px;
+    -moz-transition: padding 150ms ease-out 0s;
+    -ms-transition: padding 150ms ease-out 0s;
+    -o-transition: padding 150ms ease-out 0s;
+    -webkit-transition: padding 150ms ease-out 0s;
+    transition: padding 150ms ease-out 0s;
+}
+#login ul.subs > li li:hover {
+    padding-left: 15px;
+}
+
+/* responsive rules */
+@media all and (max-width : 980px) {
+    #login > li {
+        float: none;
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    #login ul.subs {
+        position: relative;
+        top: 0;
+    }
+    #login li:hover ul.subs {
+        display: none;
+    }
+    #login li #s1:target + ul.subs,
+    #login li #s2:target + ul.subs,
+    #login li #s3:target + ul.subs,
+    #login li #s4:target + ul.subs,
+    #login li #s7:target + ul.subs {
+        display: block;
+    }
+
+    #login ul.subs > li {
+        display: block;
+        width: auto;
+    }
+}
+
+#login li.floatLeft {
+	float: left;
+	padding-left:0.3cm;
+}
+
 
 /*buttons*/
 .buttonA {
-	-moz-box-shadow: inset 0px 1px 3px 0px #91b8b3;
-	-webkit-box-shadow: inset 0px 1px 3px 0px #91b8b3;
-	box-shadow: inset 0px 1px 3px 0px #91b8b3;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87
-		), color-stop(1, #6c7c7c));
-	background: -moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-	background: -webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-	background: -o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-	background: -ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-	background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87',
-		endColorstr='#6c7c7c', GradientType=0);
+	
 	background-color: #768d87;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
