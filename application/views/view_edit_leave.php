@@ -105,7 +105,7 @@
 					<?php $applied_leave_no = $this->Applied_leaves->get_applied_leave_no($upcoming_leave);?>
 					
 					<!-- EDIT LEAVE -->
-					<form id="editLeave" action="../leave_ctrl/edit_leave_form" method="post">
+					<form id="editLeave" action="edit_leave_form" method="post">
 					
 					<input type="hidden" name="applied_leave_no" value="<?php echo $applied_leave_no;?>">
 					<input type="hidden" name="applied_leave_name" value="<?php echo $leave_name;?>">
@@ -117,7 +117,7 @@
 					<!-- EDIT LEAVE END -->
 					
 					<!-- DELETE LEAVE -->
-					<form id="deleteLeave" action="../leave_ctrl/delete_leave" method="post">
+					<form id="deleteLeave" action="delete_leave" method="post">
 										
 					<input type="hidden" name="applied_leave_no" value="<?php echo $applied_leave_no;?>">
 					<td><input type="submit" class ="buttonA" id="deleteLeave" value="Delete"/></td>

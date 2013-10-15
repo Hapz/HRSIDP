@@ -51,7 +51,7 @@ function radioClicked() {
 		<h2>Apply Leave</h2>
 		
 		
-<form id="applyleave" action="../leave_ctrl/apply_leave" method="post">
+<form id="applyleave" action="apply_leave" method="post">
 		<table>
 <tr><td>Type:</td><td> <div id="show">
 
@@ -94,19 +94,19 @@ function radioClicked() {
 if(isset($leaveStartDateValue)){
  //echo $leaveStartDateValue;
 } else{
- $leaveStartDateValue = "dd/mm/yyyy";
+ $leaveStartDateValue = "yyyy-mm-dd";
 }
 
 if(isset($leaveEndDateValue)){
 	//echo $leaveEndDateValue;
 } else{
-	$leaveEndDateValue = "dd/mm/yyyy";
+	$leaveEndDateValue = "yyyy-mm-dd";
 }
 
 
 ?>
 
-<tr><td>Date:</td><td><input type="text" size="30" id="startDate" name="leaveStartDate" id="dateFrom" value="<?php echo $leaveStartDateValue?>" /> To <input type="text" size="30" id="endDate" name="leaveEndDate" id="dateTo" value=<?php echo $leaveEndDateValue?>/></td></tr>
+<tr><td>Date:</td><td><input type="text" size="30" id="startDate" name="leaveStartDate" id="dateFrom" value="<?php echo $leaveStartDateValue?>" /> To <input type="text" size="30" id="endDate" name="leaveEndDate" id="dateTo" value="<?php echo $leaveEndDateValue?>"/></td></tr>
 
 
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -129,11 +129,11 @@ if(isset($leaveEndDateValue)){
   } 
   
  // $(function() {
-    $( "#startDate" ).datepicker({dateFormat:'dd/mm/yy'});
+    $( "#startDate" ).datepicker({dateFormat:'yy-mm-dd'});
 
  // });
   //$(function() {
-	    $( "#endDate" ).datepicker({dateFormat:'dd/mm/yy'}).val("dd/mm/yyyy");
+	    $( "#endDate" ).datepicker({dateFormat:'yy-mm-dd'});
   //});
 
   });

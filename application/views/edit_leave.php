@@ -51,7 +51,7 @@ function radioClicked() {
 		<h2>Edit Leave</h2>
 		
 		
-<form id="edit_leave" action="../leave_ctrl/edit_leave" method="post">
+<form id="edit_leave" action="edit_leave" method="post">
 		<table>
 <tr><td>Type:</td><td> <div id="show">
 
@@ -122,14 +122,14 @@ function radioClicked() {
 
 // Repopulate Date Values
 // Change date format
-$from_date_str = DateTime::createFromFormat('Y-m-d',$from_date);
-$leave_from_date = $from_date_str->format('d/m/Y');
+// $from_date_str = DateTime::createFromFormat('Y-m-d',$from_date);
+// $leave_from_date = $from_date_str->format('d/m/Y');
 
-$to_date_str = DateTime::createFromFormat('Y-m-d',$to_date);
-$leave_to_date = $to_date_str->format('d/m/Y');
+// $to_date_str = DateTime::createFromFormat('Y-m-d',$to_date);
+// $leave_to_date = $to_date_str->format('d/m/Y');
 ?>
 
-<tr><td>Date:</td><td><input type="text" size="30" id="startDate" name="leaveStartDate" id="dateFrom" value="<?php echo $leave_from_date?>" /> To <input type="text" size="30" id="endDate" name="leaveEndDate" id="dateTo" value="<?php echo $leave_to_date?>"/></td></tr>
+<tr><td>Date:</td><td><input type="text" size="30" id="startDate" name="leaveStartDate" id="dateFrom" value="<?php echo $from_date?>" /> To <input type="text" size="30" id="endDate" name="leaveEndDate" id="dateTo" value="<?php echo $to_date?>"/></td></tr>
 
 
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -151,13 +151,14 @@ $leave_to_date = $to_date_str->format('d/m/Y');
       $('#calculated').val(diff);      
   } 
   
- // $(function() {
-    $( "#startDate" ).datepicker({dateFormat:'dd/mm/yy'});
+  // $(function() {
+  $( "#startDate" ).datepicker({dateFormat:'yy-mm-dd'});
 
- // });
-  //$(function() {
-	    $( "#endDate" ).datepicker({dateFormat:'dd/mm/yy'});
-  //});
+// });
+//$(function() {
+	    $( "#endDate" ).datepicker({dateFormat:'yy-mm-dd'});
+//});
+  ;
 
   });
 

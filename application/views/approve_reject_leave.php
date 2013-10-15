@@ -45,7 +45,7 @@
 					<td>2</td>
 					<td>-</td>
 					
-					<form id="approveleave" action="../leave_ctrl/view_approved_leave" method="post">
+					<form id="approveleave" action="view_approved_leave" method="post">
 					<td><input type="submit" class ="buttonA" id="approveLeave" value="Approve"/></td>
 					</form>
 					

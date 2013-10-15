@@ -1,7 +1,8 @@
 <div class="loginBar">
 	<ul id="login">
 <li class="floatLeft" >Sterling Engineering HR Portal</li>
-		<li><a href="/HRIS/home_ctrl/logout">Logout</a></li>
+		<?php $base = base_url(); ?>
+		<li><a href="<?php echo $base?>home_ctrl/logout">Logout</a></li>
 
 		<li><?php
 		if(!isset($given_name) OR !isset($family_name)){		
@@ -22,6 +23,6 @@
 		</li>
 		<li><a>Home</a></li>
 		<li><a href="" target="_blank"><img
-				src="/HRIS/assets/images/NotificationIcon.png" width="20" height="20" /></a></li>
+				src="<?php echo $base?>assets/images/NotificationIcon.png" width="20" height="20" /></a></li>
 	</ul>
 </div>

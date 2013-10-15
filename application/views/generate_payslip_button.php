@@ -29,7 +29,7 @@
 	<br>
 	
 	<form id=frm1" action="<?php echo site_url('remuneration_ctrl/generate_new_payment'); ?>">
-	<button onclick="myFunction();return false;">Generate payslip</button>
+	<button class ="buttonA" onclick="myFunction();return false;">Generate payslip</button>
 	</form>
 	<p id="demo"></p>
 	<!--<input type="submit" name="payslip" id="payslip" value="Generate Payslip" />  -->
