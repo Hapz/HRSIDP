@@ -7,6 +7,8 @@
 		<h2>Approve/Reject Leave(s)</h2>
 		<p>The following Leave Requests require your approval:</p>
 		
+		
+		<!-- 
 		</script>
 					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 					</script>
@@ -20,14 +22,14 @@
 						  });
 					});
 					</script>
+		 -->
 		
-		
+		<?php if($list_of_pending_leaves !==""){?>
 		<table id="tfhover" class="tftable" border="1">
 				<tr>
-					<th>S/N</th>
 					<th>Employee Name</th>
-					<th>Application Date</th>
 					<th>Type</th>
+					<th>Application Date</th>					
 					<th>From</th>
 					<th>To</th>
 					<th>Number of Days</th>
@@ -35,41 +37,62 @@
 					<th>Approve</th>
 					<th>Reject</th>
 				</tr>
-				<tr id="tr1">
-					<td>001</td>
-					<td>Jason Tan</td>
-					<td>24/09/2013 3:52PM</td>
-					<td>Annual</td>
-					<td>27/09/2013</td>
-					<td>29/09/2013</td>
-					<td>2</td>
-					<td>-</td>
+			
+			<?php $this->load->model('Applied_leaves');?>
+			<?php 
+			$count = 0;
+			foreach($list_of_pending_leaves as $pending){?>	
+			
+				<tr>					
+					<td><?php 
 					
-					<form id="approveleave" action="view_approved_leave" method="post">
+					//Leave No.
+					$leave_no = $this->Applied_leaves->get_applied_leave_no($pending);
+										
+					// Employee Name
+					echo $emp_names[$count];
+					$count = $count + 1;
+					
+					?></td>
+					
+					<td><?php 
+					
+					$leave_details_no = $this->Applied_leaves->get_leaves_details_no($pending);
+				
+					
+					$this->load->model("leave_service");
+					$leave_name = $this->leave_service->get_leave_details_no($leave_details_no);
+					
+					echo $leave_name;
+					
+					?></td>
+					
+					<td><?php echo $this->Applied_leaves->get_submitted_date($pending);?></td>
+					
+					
+					<td><?php echo $this->Applied_leaves->get_leave_from_date($pending);?></td>
+					<td><?php echo $this->Applied_leaves->get_leave_to_date($pending);?></td>
+					<td><?php echo $this->Applied_leaves->get_leave_duration($pending);?></td>
+					<td>NIL</td>
+					
+					<form id="approveleave" onsubmit="return confirm('Proceed to approve leave?');" action="approve_leave" method="post">
+					<input type="hidden" name="leaveNo" value="<?php echo $leave_no?>"/>
 					<td><input type="submit" class ="buttonA" id="approveLeave" value="Approve"/></td>
 					</form>
 					
-					<form>				
-					<td><input type="button" class="buttonA" id="rejectLeave" value="Reject"></td>
+					<form id="rejectleave" onsubmit="return confirm('Proceed to reject leave?');" action="reject_leave" method="post">
+					<input type="hidden" name="leaveNo" value="<?php echo $leave_no?>"/>			
+					<td><input type="submit" class="buttonA" id="rejectLeave" value="Reject"></td>
 					</form>
-				</tr>
-				<tr id="tr2">
-					<td>002</td>
-					<td>Janice Sim</td>
-					<td>24/09/2013 3:52PM</td>
-					<td>Medical</td>
-					<td>03/10/2013</td>
-					<td>10/10/2013</td>
-					<td>7</td>
-					<td>Marriage Certificate.pdf</td>
-					<td><input class ="buttonA" id="approveLeave" value="Approve"/></td>
 					
-					<form>				
-					<td><input type="button" class="buttonA" id="rejectLeave2" value="Reject"></td>
-					</form>					
-					
+								
 				</tr>
+			<?php }?>	
 			</table>
+		<?php } else{
+			echo "- No Leaves to Approve -";
+		}?>
+		
 			
 </div>
 <?php include_once 'footer.php';?>

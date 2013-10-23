@@ -3,7 +3,7 @@
 <?php include_once 'navigation.php';?>
 <?php include_once 'navigation.php';?>
 <?php $this->load->helper('url');?>
-<?php date_default_timezone_set("Asia/Singapore");?>
+
 <div class="wrapper3">
 
 	<div class="mainText">
@@ -12,7 +12,7 @@
 
 
 		<form id="frm1" action='generate_payslip' method="post"> 			
-	Payslip generated for the month of <?php echo date('F Y', mktime(0,0,0,date('n')-1,1,date('Y')));?>	
+	Payslip generated for the month of <?php echo date('F Y', strtotime("last month"));?>	
 	<br></br>
 			<table id="tfhover" class="tftable" border="1">
 				<tr>
@@ -22,7 +22,7 @@
 					<th>Month</th>
 					<th>Generated Time</th>
 					<th>View</th>
-					<!--<th>Print<input type="checkbox"></th>  -->
+					<th>Print<input type="checkbox"></th>
 				</tr>
 				<tr>
 					<?php
@@ -31,9 +31,7 @@
 						$employee = new Employee ();
 						$number = 1;
 						foreach ( $list_of_employee as $employee ) {
-							foreach($list_of_remuneration as $remuneration){
-								
-								if($employee->get_no() == $remuneration ->get_employee_number() && date('F', strtotime("last month"))== $remuneration -> get_month()){
+							
 							?>	
 					<td><?php print_r ($number); ?></td>
 					<td><?php print_r ( $employee->get_given_name()." ".$employee->get_family_name() ); ?>
@@ -51,14 +49,14 @@
 					
 					
 					
-					<td><?php print_r ($remuneration-> get_generated_time()); ?>	
+					<td><?php date_default_timezone_set("Asia/Singapore"); echo date("d/m/y : H:i:s", time()); ?>	
 					
 					
 					
 					
 					<td><?php
 							$arrs = array (
-									'width' => '800',
+									'width' => '700',
 									'height' => '500',
 									'toolbar' => '0',
 									'menubar' => '0',
@@ -69,32 +67,20 @@
 									'left' => '0',
 									'top' => '0' 
 							);
-							echo anchor_popup ( 'remuneration_ctrl/viewSlip/' . $employee->get_no () . '/' . $number, 'View', $arrs );
+							echo anchor_popup ( 'createpdf/pdf2/' . $employee->get_no () . '/' . $number, 'View', $arrs );
 							?>
 					<!-- <a href="generatePayment"
 						onclick="javascript:void window.open('viewSlip','1380264227356','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">View</a> -->
 					</td>
-					<!-- <td>Print <input type="checkbox"></td> -->
+					<td>Print <input type="checkbox"></td>
 				</tr>
 					<?php $number++;?>
 					<?php
-							}
-							}
 						}
 					}
 					?>
 					
 			</table>
-			
-			
-			<script type="text/javascript">
-			function displayResult(){
-				alert("All payslips printed successfully!");
-			}
-
-			
-			</script>
-			<center><input type="button" onclick="displayResult()" value="Print all payslips" /></center>
 
 			<!-- Row Highlight Javascript -->
 			<script type="text/javascript">

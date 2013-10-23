@@ -1,4 +1,3 @@
-<?php $session_data = $this->session->userdata('logged_in');?>
 <?php include_once 'header.php';?>
 <?php include_once 'login_bar.php';?>
 <?php include_once 'navigation.php';?>
@@ -8,6 +7,7 @@
 
 window.onload=function() {
 
+	
   // first, disable all the input fields
   document.forms[0].elements["otherLeaveType"].disabled=true;
  
@@ -19,6 +19,67 @@ window.onload=function() {
   // attach click event handler to date button
   var strtdate = document.forms[0].elements["leaveStartDate"];
   var enddate = document.forms[0].elements["leaveEndDate"];
+
+  //Enable datpicker	
+  $( "#startDate" ).datepicker({dateFormat:'yy-mm-dd', minDate: 0 });
+  $( "#endDate" ).datepicker({dateFormat:'yy-mm-dd', minDate: 0 });
+
+  //minimum date of end date will change as start date changes
+  $('#startDate').change(function() {  
+    $("#endDate").datepicker("option", "minDate", $('#startDate').val());
+  });
+
+	//change days between whenever date is changed 
+	//require date.js to work
+	$("#startDate, #endDate").change(function() {  
+		var d1 = $("#startDate").val();
+	    var d2 = $("#endDate").val();
+
+	    	 var minutes = 1000*60;
+	         var hours = minutes*60;
+	         var day = hours*24;
+
+             var startdate1 = getDateFromFormat(d1, "y-m-d");
+             var enddate1 = getDateFromFormat(d2, "y-m-d");
+
+			
+             var newstartdate=new Date(startdate1);
+//             newstartdate.setFullYear(startdate1.getYear(),startdate1.getMonth(),startdate1.getDay());
+             var newenddate=new Date(enddate1);
+//             newenddate.setFullYear(enddate1.getYear(),enddate1.getMonth(),enddate1.getDay());
+             var days = calcBusinessDays(newstartdate,newenddate);
+		if(days>0)
+	      	{ $('#annualDaysTaken').text(days);}
+	    else
+	      	{ $('#annualDaysTaken').text(0);}
+	});
+
+ 	 //Function that calcuate business days between 2 dates
+  	function calcBusinessDays(dDate1, dDate2) { // input given as Date objects
+        var iWeeks, iDateDiff, iAdjust = 0;
+        if (dDate2 < dDate1) return -1; // error code if dates transposed
+        var iWeekday1 = dDate1.getDay(); // day of week
+        var iWeekday2 = dDate2.getDay();
+        iWeekday1 = (iWeekday1 == 0) ? 7 : iWeekday1; // change Sunday from 0 to 7
+        iWeekday2 = (iWeekday2 == 0) ? 7 : iWeekday2;
+        if ((iWeekday1 > 5) && (iWeekday2 > 5)) iAdjust = 1; // adjustment if both days on weekend
+        iWeekday1 = (iWeekday1 > 5) ? 5 : iWeekday1; // only count weekdays
+        iWeekday2 = (iWeekday2 > 5) ? 5 : iWeekday2;
+
+        // calculate differnece in weeks (1000mS * 60sec * 60min * 24hrs * 7 days = 604800000)
+        iWeeks = Math.floor((dDate2.getTime() - dDate1.getTime()) / 604800000)
+
+        if (iWeekday1 <= iWeekday2) {
+          iDateDiff = (iWeeks * 5) + (iWeekday2 - iWeekday1)
+        } else {
+          iDateDiff = ((iWeeks + 1) * 5) - (iWeekday1 - iWeekday2)
+        }
+
+        iDateDiff -= iAdjust // take into account both days on weekend
+
+        return (iDateDiff + 1); // add 1 because dates are inclusive
+    }
+
 }
 
 function radioClicked() {
@@ -51,7 +112,11 @@ function radioClicked() {
 		<h2>Apply Leave</h2>
 		
 		
-<form id="applyleave" action="apply_leave" method="post">
+		
+		
+		<br/>
+		
+<form onsubmit="return confirm('Proceed to apply leave?');" id="applyleave" action="apply_leave" method="post">
 		<table>
 <tr><td>Type:</td><td> <div id="show">
 
@@ -81,13 +146,15 @@ function radioClicked() {
             </select>
             
         </div>
-</td></tr>
+</td>
 
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
+
+
+</tr>
+
+<tr><td>
+	<br/>
+</td></tr>
 
 <?php 
 
@@ -106,57 +173,17 @@ if(isset($leaveEndDateValue)){
 
 ?>
 
-<tr><td>Date:</td><td><input type="text" size="30" id="startDate" name="leaveStartDate" id="dateFrom" value="<?php echo $leaveStartDateValue?>" /> To <input type="text" size="30" id="endDate" name="leaveEndDate" id="dateTo" value="<?php echo $leaveEndDateValue?>"/></td></tr>
-
-
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css" />    
-
-  <script>
-    
-  $(document).ready(function () {
-	  
-  var select=function(dateStr) {
-      var d1 = $('#startDate').datepicker('getDate');
-      var d2 = $('#endDate').datepicker('getDate');
-      var diff = 0;
-      
-      if (d1 && d2) {
-            diff = Math.floor((d2.getTime() - d1.getTime()) / 86400000); // ms per day
-      }
-      $('#calculated').val(diff);      
-  } 
-  
- // $(function() {
-    $( "#startDate" ).datepicker({dateFormat:'yy-mm-dd'});
-
- // });
-  //$(function() {
-	    $( "#endDate" ).datepicker({dateFormat:'yy-mm-dd'});
-  //});
-
-  });
-
-  </script>
-  
- 
-
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
+<tr><td>Date From: (inclusive)&nbsp;&nbsp;</td><td><input type="text" size="30" id="startDate" name="leaveStartDate" id="dateFrom" value="<?php echo $leaveStartDateValue?>" /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date To: (inclusive)&nbsp;&nbsp;<input type="text" size="30" id="endDate" name="leaveEndDate" id="dateTo" value="<?php echo $leaveEndDateValue?>"/></td></tr>
 
 <!-- 
 <tr><td>Supporting Documents:</td><td><input type="text" size="30" id="leaveFile" name="leaveFile"/><input class ="buttonA" id="uploadSupportingDocs" value="Upload"/></td></tr>
  -->
  
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
+<tr><td>
+	<br/>
+</td></tr>
+
 <tr><td colspan="2"> 
 
 
@@ -166,23 +193,80 @@ if(isset($leaveEndDateValue)){
 ?>
 
 <input type="hidden" name="current_dateTime" value="<?php echo $current_date; ?>">
-  
+
 	
-		<table class="tftable" border="1">
-		<tr><th>Annual Leave Balance BEFORE deduction</th><th>No. of days taken</th><th>Annual Leave Balance AFTER deduction</th></tr>
-<tr><td>12</td><td>3</td><td>15</td></tr>
+		<table style="font-size:13px;float: left;">
+		<tr>
+			<td><b>No. of days chosen:&nbsp;&nbsp;&nbsp;</b></td> <td id="annualDaysTaken" style="color:red">0</td>
+			
+		</tr>
+		<tr>
+		<td>
+			<b>Leave balance after deduction:&nbsp;&nbsp;&nbsp;</b></td> <td>12</td>		
+		</tr>
 		</table>
 		
 
-
+		<?php 
+			date_default_timezone_set("Asia/Singapore"); 
+			$current_date = date('Y-m-d H:i:s');
+			$current_year = date('Y');
+			$next_year = date('Y') + 1;
+			
+		?>
+			
+		
+		
+			
+		<table class="tftable2" style="float: center;">
+		
+		<tr>
+		<td>
+		<u>Annual Leave Balance</u>
+		</td>
+		<td></td>		
+		<tr/>
+					
+		<tr>
+		<td>
+		Leave balance for <?php echo $current_year?>:
+		</td>
+		
+		
+		
+		<td>
+		<?php echo "<b>".$annual_leave_current."</b>"?> 
+		</td>
+							
+		</tr>
+		
+		<tr>			
+		<td>
+		Leave Balance for <?php echo $next_year?>: 
+		</td>
+		
+		
+		<td>			
+		<?php echo "<b>".$annual_leave_next."</b>"?> 
+		</td>
+		
+					
+		</tr>
+				
+		</table>
+	
 
 </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
-<tr><td>   </td></tr>
 
-<tr><td align="left" colspan="2"><input type="reset" class="buttonA" id="clear" value="Clear Form"/><input type="submit" class ="buttonA" id="applyLeave" value="Apply for Leave"/></td></tr>
+<tr><td>
+	<br/><br/> 
+</td></tr>
+
+
+
+<tr><td align="left" colspan="2"><input type="submit" class ="buttonA" id="applyLeave"  value="Apply for Leave"/>
+&nbsp;&nbsp;
+<input type="reset" class="buttonA" id="clear" value="Clear Form"/></td></tr>
 
 
 </table>

@@ -27,6 +27,7 @@
 
 		<table id="tfhover" class="tftable" border="1">
 			<tr>
+				<th>No</th>
 				<th>Project</th>
 				<th>Type</th>
 				<th>Submission Date</th>
@@ -45,8 +46,9 @@
 					?>
 				<tr>	
 					<td><?php print_r ($number);?></td>
+					<td><?php print_r ($claim->get_project_id());?></td>
 					<td><?php print_r ($claim ->get_claim_type());?></td>
-					<td><?php print_r ($claim ->get_date());?></td>
+					<td><?php print_r ($claim ->get_claim_reference_date());?></td>
 					<td><?php print_r ("$"." ".$claim -> get_claim_amount());?></td>
 					<td><?php print_r ($claim -> get_status());?></td>
 					<td><?php print_r ($claim ->get_remarks());?></td>

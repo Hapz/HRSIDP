@@ -51,7 +51,7 @@ function radioClicked() {
 		<h2>Edit Leave</h2>
 		
 		
-<form id="edit_leave" action="edit_leave" method="post">
+<form onsubmit="return confirm('Proceed to update leave?');" id="edit_leave" action="edit_leave" method="post">
 		<table>
 <tr><td>Type:</td><td> <div id="show">
 
@@ -206,7 +206,7 @@ function radioClicked() {
 <tr><td>   </td></tr>
 <tr><td>   </td></tr>
 
-<tr><td align="left" colspan="2"><input type="reset" class="buttonA" id="clear" value="Clear Form"/><input type="submit" class ="buttonA" id="applyLeave" value="Edit Leave"/></td></tr>
+<tr><td align="left" colspan="2"><input type="submit" class ="buttonA" id="applyLeave" value="Update Leave"/><input type="reset" class="buttonA" id="clear" value="Clear Form"/></td></tr>
 
 
 </table>

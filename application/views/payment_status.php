@@ -6,21 +6,27 @@
 		<h2>Update Payment Status</h2>
 		<p></p>
 		<script>
+		
+		
 		function displayResult(){
 			alert("Updated successfully!");
-			/* var x = document.getElementById("paymentStatus").setAttribute("onchange",function() {checkAddress(this));
+			document.getElementById("demo").innerHTML="Issued";
+			//document.getElementById("demo2").innerHTML="Issued";
+			/*var x = document.getElementById("paymentStatus").setAttribute("onchange",function() {checkAddress(this));
 			alert(x);
 
 			if(paymentStatus.checked){
 			alert(x);
 			} */
 		}
-			<?php 
-					echo "test"; ?>
+			<?php
+			echo "test";
+			?>
 						
 		</script>
-		<form>
-			<select name="choice" onchange='checkvalue(this.value)'> 
+		<!--<form>-->
+			<!-- Blank out the search engine -->
+			<!--  <select name="choice" onchange='checkvalue(this.value)'> 
 	
     <option value="others">All Employees </option>  
     <option value="first_name">First Name</option>
@@ -28,10 +34,10 @@
     <option value="role">Role</option>
     <option value="department">Department</option>
 	<option value="email">Email</option>
-</select>
+</select>-->
 
-  <input type="text" name="choice" id="choice" style='display:none'/>
-<script>
+			<input type="text" name="choice" id="choice" style='display: none' />
+			<script>
 function checkvalue(val)
 {
     if(val==="others")
@@ -40,10 +46,10 @@ function checkvalue(val)
        document.getElementById('choice').style.display='block'; 
 }
 </script>
-<input type="submit">
+			<!-- <input type="submit"> -->
 
 			<!-- Row Highlight Javascript -->
-<script type="text/javascript">
+			<script type="text/javascript">
 	window.onload=function(){
 	var tfrow = document.getElementById('tfhover').rows.length;
 	var tbRow=[];
@@ -91,58 +97,78 @@ table.tftable td {
 	border-color: #729ea5;
 }
 </style>
-
-			<table id="tfhover" class="tftable" border="1">
+			<form action='change_payment_status' method="post">
+				<table id="tfhover" class="tftable" border="1">
 					<thead>
 						<tr>
 							<th scope="col">No</th>
 							<th scope="col">Name</th>
 							<th scope="col">Role</th>
 							<th scope="col">Month</th>
-							<th scope="col">Remuneration Amount</th>
+
 							<th scope="col">Payment Status<input type="checkbox" /></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>Kelvin Lim</td>
-							<td style="text-align: center;">1</td>
-							<td>Line Manager</td>
-							<td>March</td>
-							<td>$2200 &nbsp;</td>
-							<td style="text-align: center;"><input type="checkbox" name="payment" id="paymentStatus" value="Payment Updated!" />Issued</td>
+							<?php
+							
+if ($list_of_employee != null || $list_of_employee !=null) {
+								$employee = new Employee ();
+								$number = 1;
+								
+								foreach ( $list_of_employee as $employee ) {
+									foreach ( $list_of_remuneration as $remuneration ) {
+										
+										if ($remuneration->get_payment_status () == 0 && $employee->get_no () == $remuneration->get_employee_number ()) {
+											
+											?>
+							
+							<td><?php print_r ($number); ?></td>
+							<td><?php print_r ( $employee->get_given_name()." ".$employee->get_family_name() ); ?>
+							
+							
+							<td><?php print_r ($employee->get_position());?>
+							
+							
+							<td><?php print_r ($remuneration->get_month());?>
+							
+							
+							<td id="demo">Not Issued</td>
+							<!--<td style="text-align: center;"><input type="checkbox" name="payment" id="paymentStatus" value="Payment Updated!" /> Not Issued.</td>  -->
+
+							<!--<td style="text-align: center;"><input type="checkbox" name="payment" id="paymentStatus" value="Payment Updated!" /> Not Issued.</td>   -->
 						</tr>
-						<tr>
-							<td>Amy Lee</td>
-							<td style="text-align: center;">2</td>
-							<td>Worker</td>
-							<td>March</td>
-							<td>$2000 &nbsp; &nbsp; &nbsp;&nbsp;</td>
-							<td style="text-align: center;"><input type="checkbox" name="payment" id="paymentStatus" value="Payment Updated!" />Issued</td>
-						</tr>
+						<?php $number++;?>
+					<?php
+										}
+									}
+								}
+							}
+							?>
 					</tbody>
 				</table>
+
 				<p>&nbsp;</p>
-				<p style="text-align: center;">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-						type="button" onclick="displayResult()" value="Update" />
-				</p>
+				<input type="submit" value="Update Payment Status" />
 				<p>&nbsp;</p>
-				<!-- end .content -->
-			</div>
-		</div>
-
-			<br />
-			<br />
-
-
-
-
-
-		</form>
-
-		<!-- end .content -->
+			</form>
+			<!-- end .content -->
+	
 	</div>
+</div>
+
+<br />
+<br />
+
+
+
+
+
+<!-- </form> -->
+
+<!-- end .content -->
+</div>
 </div>
 
 

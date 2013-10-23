@@ -21,7 +21,7 @@ $obj_pdf->SetHeaderMargin ( PDF_MARGIN_HEADER );
 $obj_pdf->SetFooterMargin ( PDF_MARGIN_FOOTER );
 $obj_pdf->SetMargins ( PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT );
 $obj_pdf->SetAutoPageBreak ( TRUE, PDF_MARGIN_BOTTOM );
-$obj_pdf->SetFont ( 'helvetica', '', 12 );
+$obj_pdf->SetFont ( 'helvetica', '', 9 );
 $obj_pdf->setFontSubsetting ( false );
 $obj_pdf->AddPage ();
 ob_start ();
@@ -238,6 +238,6 @@ if ($list_of_employee != null) {
 $content = ob_get_contents ();
 ob_end_clean ();
 $obj_pdf->writeHTML ( $content, true, false, true, false, '' );
-$file_name = $employee->get_given_name()." ".$employee->get_family_name().'_'.date('F Y', mktime(0,0,0,date('n')-1,1,date('Y')));
+$file_name = $given_name.'_'.$family_name.'_'.date('F Y', mktime(0,0,0,date('n')-1,1,date('Y')));
 $obj_pdf->Output ( $file_name, 'I' );
 ?>

@@ -3,11 +3,10 @@
 <?php include_once 'navigation.php';?>
 
 <div class="wrapper3">
-	<div class="mainText">
 		<h2>Submit Claim</h2>
 
-		<!-- Row Highlight Javascript -->
-		<script type="text/javascript">
+<!-- Row Highlight Javascript -->
+<script type="text/javascript">
 	window.onload=function(){
 	var tfrow = document.getElementById('tfhover').rows.length;
 	var tbRow=[];
@@ -21,11 +20,10 @@
 		};
 	}
 };
-
 </script>
-		<!-- Adding/Removing new row -->
-		<script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
-		<script>
+
+<!-- Adding/Removing new row -->
+<script>
 	$(document).ready(function() {
 		var id = 0;
 		
@@ -43,20 +41,19 @@
 		});
 		
 		// Remove button functionality
-		//$(document).on("click", "table.dynatable button.remove", function() {
-		$("#remove").live("click", function() {
+		$(document).on("click", "#remove", function() {			
 			  $(this).parents("tr").remove();
 		});
 
 		//upload file	
-		$("#upload").live("click", function() {
+/*		$("#upload").live("click", function() {
 			//alert($(this).siblings(":file").attr("value"));
 			setTimeout(
   				function() {
 				    //wait for a few sec before the alert is up
   					alert("Successfully uploaded the file");
   	  				}, 2500);
-		});
+		});*/
 	});
 </script>
 		<!-- styling for the adding new row, without styling the row will no appear if remove all existing row-->
@@ -87,7 +84,7 @@ if ($successful != null) {
 	} else if ($successful == 2) {
 		?>	
 <script>
-	alert("Submit the calims fail");
+	alert("Submit the claims fail");
 </script>
 <?php
 	}
@@ -111,10 +108,10 @@ if ($successful != null) {
 					<tr class="prototype">
 						<td width="3%"><input type="checkbox" name="select_claim[]"></td>
 						<td width="7%">Date:<input type="date" name="date_incurr[]" /></td>
-						<td width="15%"><input type="text" name="project_id[]" size="12" /></td>
+						<td width="15%"><input type="text" name="project_id[]" size="2" /></td>
 						<td width="30%">Insert File: <input type="file" id="files" "/> <input
 							type="hidden" value="00000000111000000000" name="claim_pic[]" />
-							<input type="button" value="Upload" id="upload" />
+							<!-- <input type="button" value="Upload" id="upload" /> -->
 						</td>
 						<td width="20%">Claim Type: <select name="type[]">
 								<option value="entertainment">Entertainment</option>
@@ -125,7 +122,7 @@ if ($successful != null) {
 								<option value="others">Others</option>
 						</select>
 						</td>
-						<td width="15%">$<input type="text" size="10"
+						<td width="15%">$<input type="text" size="5"
 							name="claim_amount[]" /></td>
 						<td width="10%"><input type="button" value="Remove" id="remove" /></td>
 					</tr>
@@ -135,7 +132,6 @@ if ($successful != null) {
 		</form>
 		<!-- end .content -->
 
-	</div>
 </div>
 
 
