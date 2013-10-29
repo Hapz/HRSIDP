@@ -24,9 +24,11 @@
 
 <!-- Adding/Removing new row -->
 <script>
+	
 	$(document).ready(function() {
-		var id = 0;
-		
+		var id=0;		
+		submit_b(id);
+		remove_b();
 		// Add button functionality
 		$("#add").click(function() {
 			id++;
@@ -35,25 +37,39 @@
 			// Get a new row based on the prototype row
 			var prot = master.find(".prototype").clone();
 			prot.attr("class", "");
-			prot.find(".id").attr("value", id);
-			
-			master.find("tbody").append(prot);
+			prot.find(".id").attr("value", id);			
+			prot.find('input').val("");//set all value to blank
+			prot.find('input:last').val("Remove");//set the value for remove
+			master.find("tbody").append(prot);						
+			submit_b(id);
+			remove_b();
 		});
 		
 		// Remove button functionality
-		$(document).on("click", "#remove", function() {			
-			  $(this).parents("tr").remove();
+		$(document).on("click", "#remove", function() {
+			id--;		
+  			$(this).parents("tr").remove();
+  			submit_b(id);
+  			remove_b();
 		});
 
-		//upload file	
-/*		$("#upload").live("click", function() {
-			//alert($(this).siblings(":file").attr("value"));
-			setTimeout(
-  				function() {
-				    //wait for a few sec before the alert is up
-  					alert("Successfully uploaded the file");
-  	  				}, 2500);
-		});*/
+		//disable submit button if there is no rows of claim added
+		function submit_b(id){
+			if (id <0){
+				 $("input[type=submit]").attr("disabled", "disabled");
+			 }else{		 
+				  $("input[type=submit]").removeAttr("disabled");
+			 }	 
+	 	}
+	 	
+		function remove_b(){							 
+							 
+			 //$("#remove").removeAttr("disabled");
+			 $(".remove").show();
+			 $(".remove:first").hide();
+			 
+	 	}
+	 	
 	});
 </script>
 		<!-- styling for the adding new row, without styling the row will no appear if remove all existing row-->
@@ -70,50 +86,57 @@
 		text-align: center;
 	}*/
 .dynatable .prototype {
-	display: none;
+	display: 1;
 }
 </style>
 <?php
+
+$rej_successful = $this->session->flashdata('successful');
+if($rej_successful != null){
+	$successful = $rej_successful;
+}
+
 if ($successful != null) {
 	if ($successful == 1) {
 		?>
 <script>
-	alert("Successful submitted the calims");
+	alert("Successfully submitted the claims");
 </script>	
 <?php
 	} else if ($successful == 2) {
 		?>	
 <script>
-	alert("Submit the claims fail");
+	alert("Claim submission failed. Please enter all required fields to continue!");
 </script>
 <?php
 	}
 }
 ?>
-
+<font color="red"><?php echo validation_errors(); ?></font>
 		<form action="submit_claims" method="post">
 			<table id="tfhover" class="tftable dynatable" border="1">
 				<thead>
 					<tr>
-						<th width="3%"></th>
-						<th width="7%">Date Incurred</th>
-						<th width="15%">Project</th>
-						<th width="30%">File</th>
-						<th width="20%">Type</th>
-						<th width="15%">Amount</th>
+						
+						<th width="18%">Date Incurred</th>
+						<th width="15%">Project ID</th>
+						<th width="30%">Upload Receipt</th>
+						<th width="17%">Claim Type</th>
+						<th width="10%">Amount</th>
 						<th width="10%"><input type="button" value="Add" id="add"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr class="prototype">
-						<td width="3%"><input type="checkbox" name="select_claim[]"></td>
-						<td width="7%">Date:<input type="date" name="date_incurr[]" /></td>
-						<td width="15%"><input type="text" name="project_id[]" size="2" /></td>
-						<td width="30%">Insert File: <input type="file" id="files" "/> <input
-							type="hidden" value="00000000111000000000" name="claim_pic[]" />
+						
+						<td width="18%">Date:<input type="date" name="date_incurr[]" value="<?php echo set_value('date_incurr[]'); ?>" /></td>
+						<td width="15%"><input type="text" name="project_id[]" size="3" value="<?php echo set_value('project_id[]'); ?>" /></td>
+						<td width="30%">Insert File: <input type="file" id="files" name="claim_pic[]" value="<?php echo set_value('claim_pic[]'); ?>"/> 
+						<!-- <input
+							type="hidden" value="00000000111000000000" name="claim_pic[]" /> -->
 							<!-- <input type="button" value="Upload" id="upload" /> -->
 						</td>
-						<td width="20%">Claim Type: <select name="type[]">
+						<td width="17%">Claim Type: <select name="type[]" value="<?php echo set_value('type[]'); ?>">
 								<option value="entertainment">Entertainment</option>
 								<option value="transport">Transport</option>
 								<option value="telecom">Telecom</option>
@@ -122,13 +145,13 @@ if ($successful != null) {
 								<option value="others">Others</option>
 						</select>
 						</td>
-						<td width="15%">$<input type="text" size="5"
-							name="claim_amount[]" /></td>
-						<td width="10%"><input type="button" value="Remove" id="remove" /></td>
+						<td width="10%">$<input type="text" size="5"
+							name="claim_amount[]" value="<?php echo set_value('claim_amount[]'); ?>"/></td>
+						<td width="10%"><input type="button" value="Remove" id="remove" class="remove" /></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="submit" value="Submit Claims" />
+			<input type="submit" value="Submit Claims"/>
 		</form>
 		<!-- end .content -->
 

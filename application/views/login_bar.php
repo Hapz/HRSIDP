@@ -28,6 +28,7 @@
 		if(!isset($given_name) OR !isset($family_name)){		
 			$given_name = $session_data["given_name"];
 			$family_name = $session_data["family_name"];
+			$employee_no = $session_data["no"];
 			echo $given_name. ' ' . $family_name;
 			
 		} 		

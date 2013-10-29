@@ -94,7 +94,7 @@
 
 			
 			</script>
-			<center><input type="button" onclick="displayResult()" value="Print all payslips" /></center>
+			<!-- <center><input type="button" onclick="displayResult()" value="Print all payslips" /></center> -->
 
 			<!-- Row Highlight Javascript -->
 			<script type="text/javascript">

@@ -26,6 +26,10 @@
 
 
 		<table id="tfhover" class="tftable" border="1">
+		<?php 
+		if ($list_of_claims != null) {			
+		?>
+		Claim submitted for the month of <?php echo date('F Y', mktime(0,0,0,date('n')-1,1,date('Y')));?> and <?php echo date('F Y', mktime(0,0,0,date('n'),1,date('Y')));?>.
 			<tr>
 				<th>No</th>
 				<th>Project</th>
@@ -36,8 +40,7 @@
 				<th>Remarks</th>
 			</tr>
 			<?php		
-					// test get all employee
-					if ($list_of_claims != null) {
+					// test get all employee					
 					$claim = new Claim();
 					$number = 1;
 					
@@ -55,11 +58,17 @@
 				</tr>
 				
 				<?php $number++;?>
-					<?php
+	<?php
 							//}
 						}
-					}
-					?>
+		}else{
+	?>
+		
+			There is no claim submitted for the month of <?php echo date('F Y', mktime(0,0,0,date('n')-1,1,date('Y')));?> and <?php echo date('F Y', mktime(0,0,0,date('n'),1,date('Y')));?>.
+		
+	<?php 
+		}
+	?>
 		</table>
 
 		<!-- end .content -->

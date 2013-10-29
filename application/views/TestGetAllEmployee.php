@@ -5,18 +5,15 @@
 	<!-- <a href="EmployeeCtrl/getAllEmployeeProfile">Click Me!</a> -->
 		<?php		
 		// test get all employee
-		//if ($list_of_employee != null) {
-			//$this->load->model('employee');
-			//$employee = new Employee ();
-			//foreach ( $list_of_employee as $employee ) {
-				//print_r ( $employee );
-				
+		if ($list_of_employee != null) {
+			$employee = new Employee ();
+			foreach ( $list_of_employee as $employee ) {
+				print_r ( $employee );
 		?>
 				<br><br><br>				
 		<?php
-			//}
-			//echo $list_of_employee;
-		//}
+			}
+		}
 		?>
 		
 		
@@ -61,29 +58,3 @@
 </body>
 
 </html>
-
-<html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
-<script>
-$(document).ready(function(){
-  $(".btn1").click(function(){
-  $("p").hide();
-  });
-  $(".btn2").click(function(){
-  $("p").show();
-  });
-});
-</script>
-</head>
-<body>
-
-<p>This is a paragraph.</p>
-
-<button class="btn1">Hide</button>
-<button class="btn2">Show</button>
-
-</body>
-</html>
-

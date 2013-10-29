@@ -6,10 +6,6 @@
 	<div class="mainText">
 		<h2>View & Edit Leave</h2>
 		
-		<?php 
-		
-		
-		?>
 		
 		<?php 
 			date_default_timezone_set("Asia/Singapore"); 
@@ -312,40 +308,10 @@
 				</td></tr>			
 			</table>
 			
-		<?php }?>
+		<?php }?>		
 		
 		
 		
-		<!--
-		<h4>Past Leave(s)</h4>
-		<table id="tfhover" class="tftable" border="1">
-				<tr>				
-					<th>Application Date</th>
-					<th>Type</th>
-					<th>From</th>
-					<th>To</th>
-					<th>Number of Days</th>
-					<th>Approved by Line Manager</th>
-				</tr>
-				<tr>					
-					<td>24/09/2011 3:52PM</td>
-					<td>Maternity</td>
-					<td>27/09/2011</td>
-					<td>29/09/2011</td>
-					<td>2</td>
-					<td>Yes</td>
-				</tr>
-				<tr>					
-					<td>24/09/2011 3:52PM</td>
-					<td>Annual</td>
-					<td>03/10/2011</td>
-					<td>10/10/2011</td>
-					<td>7</td>
-					<td>No</td>
-				</tr>
-			</table>
-			
-		  -->
 		
 </div>
 <?php include_once 'footer.php';?>

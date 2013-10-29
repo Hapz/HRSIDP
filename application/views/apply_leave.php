@@ -6,8 +6,9 @@
 <script>
 
 window.onload=function() {
+  //Hide annual leave tables 
+  $('.hiddenDivisions').hide();
 
-	
   // first, disable all the input fields
   document.forms[0].elements["otherLeaveType"].disabled=true;
  
@@ -88,19 +89,25 @@ function radioClicked() {
   // disable/enable appropriate input elements
   switch(this.value) {
     case "unpaid" :
-       document.forms[0].elements["otherLeaveType"].disabled=true;      
+       document.forms[0].elements["otherLeaveType"].disabled=true;
+       $('.hiddenDivisions').hide();      
        break;
     case "annual" :
-       document.forms[0].elements["otherLeaveType"].disabled=true;       
+       document.forms[0].elements["otherLeaveType"].disabled=true; 
+       $('.hiddenDivisions').hide();      
+       $('#annualLeaveTbl').show();      
        break;
     case "maternity" :       
        document.forms[0].elements["otherLeaveType"].disabled=true;
+       $('.hiddenDivisions').hide();
+       $('#uploadOptions').show();         
        break;
     case "others" :       
        document.forms[0].elements["otherLeaveType"].disabled=false;
+       $('.hiddenDivisions').hide();
+       $('#uploadOptions').show();      
        break;
   }
-
 }
 
 </script>
@@ -111,9 +118,20 @@ function radioClicked() {
 	<div class="mainText">
 		<h2>Apply Leave</h2>
 		
+		<?php 		
+		if(isset($list_of_errors)){
+			echo "<font color='red'>Error: <br/>";
+			echo "<ul>";
+			foreach($list_of_errors as $error1){
+				echo "				
+					<li>$error1</li>";				
+			}
+			echo "</ul>";
+		}
+		echo "</font>";
+		?>
 		
-		
-		
+		<br/>
 		<br/>
 		
 <form onsubmit="return confirm('Proceed to apply leave?');" id="applyleave" action="apply_leave" method="post">
@@ -193,19 +211,25 @@ if(isset($leaveEndDateValue)){
 ?>
 
 <input type="hidden" name="current_dateTime" value="<?php echo $current_date; ?>">
-
-	
+		
+		
 		<table style="font-size:13px;float: left;">
 		<tr>
 			<td><b>No. of days chosen:&nbsp;&nbsp;&nbsp;</b></td> <td id="annualDaysTaken" style="color:red">0</td>
 			
 		</tr>
 		<tr>
+		
+		<!--
 		<td>
 			<b>Leave balance after deduction:&nbsp;&nbsp;&nbsp;</b></td> <td>12</td>		
 		</tr>
+		-->
+		
 		</table>
 		
+		<!--  Create a divsion to hide or show depending on radio button click -->
+		<div id = "annualLeaveTbl" class = "hiddenDivisions">	
 
 		<?php 
 			date_default_timezone_set("Asia/Singapore"); 
@@ -218,7 +242,7 @@ if(isset($leaveEndDateValue)){
 		
 		
 			
-		<table class="tftable2" style="float: center;">
+		<table class ="tftable2" style="float: center;">
 		
 		<tr>
 		<td>
@@ -255,7 +279,16 @@ if(isset($leaveEndDateValue)){
 				
 		</table>
 	
-
+		</div>
+		<tr >
+		<td colspan="2">
+		<br/>
+		<div id="uploadOptions" class = "hiddenDivisions">
+		Please upload relevant documents to support your leave:<br/>
+			<input type="file" size="30" id="leaveFile" name="leaveFile"/>
+			<input type="button" class ="buttonA" id="uploadSupportingDocs" value="Upload"/>
+		</div>
+		</td>
 </td></tr>
 
 <tr><td>
